@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 🌐主流博客框架对比指南 -  TT清沫ukの博客</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5201753_g7fgu4u1tlr.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://ts1.tc.mm.bing.net/th/id/OIP-C.ifh8a4Z3Q7l8q5Cm1pnN5AHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://static.kivo.wiki/images/gallery/1.%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85CG/Vol.1/BG_CS_Abydos_01.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="TT清沫ukの博客">
+        <img
+			src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			alt="TT清沫uk"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" title="TT清沫uk">
+			<img
+				src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+				alt="TT清沫uk"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>11</div>
+		<div><span>标签</span>25</div>
+		<div><span>分类</span>6</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"
+			title="开往"
+		>
+			<i
+				class="kirafont
+					
+						icon-huoche
+					"
+			></i>
+			<div class="kira-list-item-content">
+				开往
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<去掉尖括号后填上你的QQ号>&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/3546738451286034"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/TTquk/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/Linux/">
+              Linux
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/博客/">
+              博客
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/游戏/">
+              游戏
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/社会心理/">
+              社会心理
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/网络安全/">
+              网络安全
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/读书笔记/">
+              读书笔记
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/CC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">CC攻击</a> <a href="/tags/DDoS/" style="font-size: 10px;">DDoS</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Kali/" style="font-size: 20px;">Kali</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MC/" style="font-size: 10px;">MC</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%86%85%E5%8D%B7/" style="font-size: 10px;">内卷</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 10px;">基础教程</a> <a href="/tags/%E5%A4%9A%E5%B7%B4%E8%83%BA/" style="font-size: 10px;">多巴胺</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E7%82%B9%E8%B5%9E/" style="font-size: 10px;">点赞</a> <a href="/tags/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/" style="font-size: 10px;">社交媒体</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/" style="font-size: 10px;">社会工程学</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83/" style="font-size: 10px;">社会比较</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">评论系统</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">钓鱼攻击</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">11</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">TT清沫uk</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		<a href="https://icp.gov.moe/?keyword=20266328" target="_blank">萌ICP备20266328号</a>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://static.kivo.wiki/images/gallery/1.%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85CG/Vol.1/BG_CS_Abydos_01.jpg"
+				data-sizes="auto"
+				alt="🌐主流博客框架对比指南"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>🌐主流博客框架对比指南</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年06月27日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.8k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 12 分钟</a>
+		</div>
+		<html><head></head><body><blockquote>
+<p>选对框架，让你的博客之路事半功倍。本文从<strong>性能、生态、易用性、适用场景</strong>四个维度，全面对比当前最流行的博客框架。</p>
+</blockquote>
+<h2><span id="%F0%9F%93%8B-%E7%9B%AE%E5%BD%95">📋 目录</span></h2><ol>
+<li><a href="#%E6%80%BB%E8%A7%88%E5%AF%B9%E6%AF%94%E8%A1%A8">总览对比表</a></li>
+<li><a href="#1-hexo--%E6%9E%81%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%88%90%E5%99%A8">Hexo — 极速静态博客生成器</a></li>
+<li><a href="#2-hugo--%E7%BC%96%E8%AF%91%E9%80%9F%E5%BA%A6%E4%B9%8B%E7%8E%8B">Hugo — 编译速度之王</a></li>
+<li><a href="#3-jekyll--github-pages-%E7%9A%84%E9%BB%84%E9%87%91%E6%90%AD%E6%A1%A3">Jekyll — GitHub Pages 的黄金搭档</a></li>
+<li><a href="#4-gatsby--%E7%8E%B0%E4%BB%A3%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88%E9%A6%96%E9%80%89">Gatsby — 现代前端技术栈首选</a></li>
+<li><a href="#5-vuepress--vitepress--%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%88%A9%E5%99%A8">VuePress / VitePress — 技术文档利器</a></li>
+<li><a href="#6-ghost--%E4%B8%93%E4%B8%9A%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0">Ghost — 专业内容发布平台</a></li>
+<li><a href="#7-wordpress--%E5%85%A8%E7%90%83%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84-cms">WordPress — 全球最流行的 CMS</a></li>
+<li><a href="#8-astro--%E5%B2%9B%E5%B1%BF%E6%9E%B6%E6%9E%84%E9%BB%98%E8%AE%A4%E9%9B%B6-js">Astro — 岛屿架构，默认零 JS</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9">如何选择？</a></li>
+</ol>
+<hr>
+<h2><span id="%E6%80%BB%E8%A7%88%E5%AF%B9%E6%AF%94%E8%A1%A8">总览对比表</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">┌─────────────┬──────────┬──────────┬──────────┬───────────┬──────────────┐<br>│   框架      │  语言    │ 构建速度 │ 学习曲线 │  GitHub   │  最适合      │<br>│             │          │          │          │  Pages    │              │<br>├─────────────┼──────────┼──────────┼──────────┼───────────┼──────────────┤<br>│   Hexo      │ Node.js  │   ⚡⚡    │   ★☆☆    │   ✅      │ 个人博客     │<br>│   Hugo      │   Go     │   ⚡⚡⚡  │   ★★☆    │   ✅      │ 大型站点     │<br>│   Jekyll    │  Ruby    │   ⚡⚡    │   ★☆☆    │   ✅✅    │ GitHub托管   │<br>│   Gatsby    │  React   │   ⚡     │   ★★★    │   ✅      │ 现代Web应用  │<br>│   VitePress │  Vue/TS  │   ⚡⚡⚡  │   ★★☆    │   ✅      │ 技术文档     │<br>│   Ghost     │ Node.js  │   N/A    │   ★★☆    │   ❌      │ 内容创作     │<br>│   WordPress │   PHP    │   N/A    │   ★☆☆    │   ❌      │ 全能型CMS    │<br>│   Astro     │ JS/TS    │   ⚡⚡⚡  │   ★★☆    │   ✅      │ 内容站点     │<br>└─────────────┴──────────┴──────────┴──────────┴───────────┴──────────────┘<br></code></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2><span id="1-hexo--%E6%9E%81%E9%80%9F%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%88%90%E5%99%A8">1. Hexo — 极速静态博客生成器</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://hexo.io/icon/favicon-196x196.png" alt="Hexo" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io</a><br><strong>GitHub Stars</strong>: ⭐ 39k+<br><strong>首发年份</strong>: 2012</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🚀 <strong>极速生成</strong></td>
+<td>数百篇文章秒级生成，Node.js 异步 IO 加持</td>
+</tr>
+<tr>
+<td>📝 <strong>Markdown 原生</strong></td>
+<td>支持 GitHub Flavored Markdown，写作体验极佳</td>
+</tr>
+<tr>
+<td>🎨 <strong>丰富主题</strong></td>
+<td>官方主题市场 300+ 主题，NexT、Butterfly 等经典主题</td>
+</tr>
+<tr>
+<td>🔌 <strong>插件系统</strong></td>
+<td>强大的插件架构，RSS、Sitemap、SEO 一键集成</td>
+</tr>
+<tr>
+<td>🌍 <strong>一键部署</strong></td>
+<td>一条命令部署到 GitHub Pages、Vercel、Netlify 等</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4">🔧 核心命令</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-cli -g      <span class="hljs-comment"># 安装</span><br>hexo init my-blog            <span class="hljs-comment"># 初始化</span><br>hexo new <span class="hljs-string">"我的第一篇文章"</span>      <span class="hljs-comment"># 新建文章</span><br>hexo generate                <span class="hljs-comment"># 生成静态文件</span><br>hexo server                  <span class="hljs-comment"># 本地预览</span><br>hexo deploy                  <span class="hljs-comment"># 一键部署</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E6%A1%86%E6%9E%B6%E6%9E%B6%E6%9E%84">📊 框架架构</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph LR<br>    A[Markdown 源文件] --&gt; B[Hexo 引擎]<br>    B --&gt; C[主题渲染]<br>    B --&gt; D[插件处理]<br>    C --&gt; E[纯静态 HTML]<br>    D --&gt; E<br>    E --&gt; F[GitHub Pages]<br>    E --&gt; G[Vercel]<br>    E --&gt; H[自有服务器]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>中文生态极好</strong>：大量中文主题、教程和插件</li>
+<li>✅ <strong>学习曲线平缓</strong>：前端开发者几乎零门槛</li>
+<li>✅ <strong>部署极其简单</strong>：<code>hexo deploy</code> 一键推送</li>
+<li>❌ <strong>文章多时构建变慢</strong>：超过 500 篇文章增量编译才有优势</li>
+<li>❌ <strong>Node.js 依赖</strong>：需要 Node.js 环境</li>
+</ul>
+<hr>
+<h2><span id="2-hugo--%E7%BC%96%E8%AF%91%E9%80%9F%E5%BA%A6%E4%B9%8B%E7%8E%8B">2. Hugo — 编译速度之王</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://gohugo.io/favicon-32x32.png" alt="Hugo" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://gohugo.io/">https://gohugo.io</a><br><strong>GitHub Stars</strong>: ⭐ 76k+<br><strong>首发年份</strong>: 2013</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>⚡ <strong>极致速度</strong></td>
+<td>Go 语言编译，10000 篇文章 &lt; 1 秒构建</td>
+</tr>
+<tr>
+<td>📦 <strong>单二进制</strong></td>
+<td>无需安装运行时，一个可执行文件搞定</td>
+</tr>
+<tr>
+<td>🏗️ <strong>灵活内容</strong></td>
+<td>支持 Markdown、AsciiDoc、Org-mode 等多种格式</td>
+</tr>
+<tr>
+<td>🌍 <strong>多语言</strong></td>
+<td>原生多语言支持，国际化站点首选</td>
+</tr>
+<tr>
+<td>🧩 <strong>Taxonomies</strong></td>
+<td>强大的分类系统，自定义标签、分类、系列</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4">🔧 核心命令</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hugo new site my-blog          <span class="hljs-comment"># 新建站点</span><br>hugo new posts/hello-world.md  <span class="hljs-comment"># 新建文章</span><br>hugo server -D                 <span class="hljs-comment"># 本地预览（含草稿）</span><br>hugo                           <span class="hljs-comment"># 构建（毫秒级完成）</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E6%9E%84%E5%BB%BA%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94">📊 构建性能对比</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>    subgraph "构建 5000 篇文章耗时"<br>        A[Hexo: ~120s] <br>        B[Jekyll: ~90s]<br>        C[Hugo: ~2s]<br>        D[Gatsby: ~180s]<br>    end<br>    style C fill:#4CAF50,stroke:#333,color:#fff<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>速度碾压所有同类</strong>：没有比 Hugo 更快的静态站点生成器</li>
+<li>✅ <strong>零依赖安装</strong>：下载一个文件就能用</li>
+<li>✅ <strong>LiveReload 极快</strong>：修改即时可见</li>
+<li>❌ <strong>模板语法独特</strong>：Go Template 语法需要适应</li>
+<li>❌ <strong>中文主题较少</strong>：相比 Hexo 中文资源略显不足</li>
+</ul>
+<hr>
+<h2><span id="3-jekyll--github-pages-%E7%9A%84%E9%BB%84%E9%87%91%E6%90%AD%E6%A1%A3">3. Jekyll — GitHub Pages 的黄金搭档</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://jekyllrb.com/img/logo-2x.png" alt="Jekyll" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://jekyllrb.com/">https://jekyllrb.com</a><br><strong>GitHub Stars</strong>: ⭐ 49k+<br><strong>首发年份</strong>: 2008（静态博客鼻祖）</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🏠 <strong>GitHub Pages 原生</strong></td>
+<td>GitHub 官方支持，无需构建，推送即部署</td>
+</tr>
+<tr>
+<td>💎 <strong>Liquid 模板</strong></td>
+<td>Shopify 同款模板引擎，简单强大</td>
+</tr>
+<tr>
+<td>📦 <strong>丰富插件</strong></td>
+<td>GitHub 官方维护大量插件</td>
+</tr>
+<tr>
+<td>🎨 <strong>Minima 主题</strong></td>
+<td>经典简约，适合文字创作者</td>
+</tr>
+<tr>
+<td>🔒 <strong>安全稳定</strong></td>
+<td>Ruby 生态成熟，安全漏洞响应快</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4">🔧 核心命令</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">gem install jekyll bundler     <span class="hljs-comment"># 安装</span><br>jekyll new my-blog             <span class="hljs-comment"># 新建站点</span><br>jekyll serve                   <span class="hljs-comment"># 本地预览</span><br>jekyll build                   <span class="hljs-comment"># 构建</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">📊 工作流程</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">flowchart TD<br>    A[推送 Markdown 到 GitHub] --&gt; B{GitHub Actions}<br>    B --&gt; C[Jekyll 构建]<br>    C --&gt; D[生成静态 HTML]<br>    D --&gt; E[部署到 GitHub Pages]<br>    E --&gt; F[yourname.github.io]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>GitHub 深度集成</strong>：最省心的部署体验</li>
+<li>✅ <strong>稳定可靠</strong>：运行十余年，生态成熟</li>
+<li>✅ <strong>适合纯写作</strong>：无需关心前端细节</li>
+<li>❌ <strong>Windows 环境不友好</strong>：Ruby 在 Windows 上体验差</li>
+<li>❌ <strong>构建速度一般</strong>：大规模站点构建较慢</li>
+</ul>
+<hr>
+<h2><span id="4-gatsby--%E7%8E%B0%E4%BB%A3%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88%E9%A6%96%E9%80%89">4. Gatsby — 现代前端技术栈首选</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://www.gatsbyjs.com/icons/icon-192x192.png" alt="Gatsby" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://www.gatsbyjs.com/">https://www.gatsbyjs.com</a><br><strong>GitHub Stars</strong>: ⭐ 55k+<br><strong>首发年份</strong>: 2015</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>⚛️ <strong>React 技术栈</strong></td>
+<td>基于 React，可以写任何现代 Web 应用</td>
+</tr>
+<tr>
+<td>🔗 <strong>GraphQL 数据层</strong></td>
+<td>统一的数据层，博客内容、API、CMS 全打通</td>
+</tr>
+<tr>
+<td>📸 <strong>图片优化</strong></td>
+<td>gatsby-plugin-image 自动懒加载、WebP 转换</td>
+</tr>
+<tr>
+<td>🔌 <strong>4000+ 插件</strong></td>
+<td>生态极其丰富，几乎无所不能</td>
+</tr>
+<tr>
+<td>☁️ <strong>Gatsby Cloud</strong></td>
+<td>官方云平台，增量构建极快</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%93%8A-%E6%95%B0%E6%8D%AE%E5%B1%82%E6%9E%B6%E6%9E%84">📊 数据层架构</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>    subgraph "数据源"<br>        A1[Markdown 文件]<br>        A2[WordPress API]<br>        A3[Headless CMS]<br>        A4[数据库]<br>    end<br>    <br>    subgraph "Gatsby"<br>        B[GraphQL 数据层]<br>        C[React 组件]<br>        D[静态页面生成]<br>    end<br>    <br>    A1 --&gt; B<br>    A2 --&gt; B<br>    A3 --&gt; B<br>    A4 --&gt; B<br>    B --&gt; C<br>    C --&gt; D<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>前端性能极致</strong>：代码分割、预加载、PWA 开箱即用</li>
+<li>✅ <strong>数据源极其灵活</strong>：什么都能接，什么都能展示</li>
+<li>✅ <strong>React 生态复用</strong>：React 开发者零学习成本</li>
+<li>❌ <strong>构建速度慢</strong>：大型站点构建可能数十分钟</li>
+<li>❌ <strong>概念复杂</strong>：GraphQL + Gatsby API 学习曲线陡峭</li>
+</ul>
+<hr>
+<h2><span id="5-vuepress--vitepress--%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%88%A9%E5%99%A8">5. VuePress / VitePress — 技术文档利器</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://vitepress.dev/vitepress-logo-mini.svg" alt="VitePress" class="lazyload"></p>
+<p><strong>VuePress 官网</strong>: <a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/">https://vuepress.vuejs.org</a><br><strong>VitePress 官网</strong>: <a target="_blank" rel="noopener" href="https://vitepress.dev/">https://vitepress.dev</a><br><strong>GitHub Stars</strong>: ⭐ 22k+ / 13k+</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>VitePress</th>
+<th>VuePress</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🚀 <strong>构建工具</strong></td>
+<td>Vite（极快）</td>
+<td>Webpack</td>
+</tr>
+<tr>
+<td>📝 <strong>Markdown 增强</strong></td>
+<td>✅ 内置</td>
+<td>✅ 内置</td>
+</tr>
+<tr>
+<td>🎨 <strong>默认主题</strong></td>
+<td>极简现代</td>
+<td>经典文档风</td>
+</tr>
+<tr>
+<td>🔍 <strong>内置搜索</strong></td>
+<td>✅ 本地搜索</td>
+<td>✅ Algolia</td>
+</tr>
+<tr>
+<td>📱 <strong>响应式</strong></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-vitepress-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">🔧 VitePress 快速开始</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm add -D vitepress<br>npx vitepress init<br>npm run docs:dev       <span class="hljs-comment"># 本地预览</span><br>npm run docs:build     <span class="hljs-comment"># 构建</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>文档体验一流</strong>：侧边栏、导航、搜索开箱即用</li>
+<li>✅ <strong>VitePress 构建极快</strong>：秒级热更新</li>
+<li>✅ <strong>Vue 生态完美契合</strong>：可以在 Markdown 中使用 Vue 组件</li>
+<li>❌ <strong>博客功能偏弱</strong>：更适合文档站，博客能力需二次开发</li>
+<li>❌ <strong>Vue 限定</strong>：需要 Vue 基础</li>
+</ul>
+<hr>
+<h2><span id="6-ghost--%E4%B8%93%E4%B8%9A%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B9%B3%E5%8F%B0">6. Ghost — 专业内容发布平台</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://ghost.org/favicon.ico" alt="Ghost" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://ghost.org/">https://ghost.org</a><br><strong>GitHub Stars</strong>: ⭐ 47k+<br><strong>首发年份</strong>: 2013</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>✍️ <strong>专业编辑器</strong></td>
+<td>类 Medium 的所见即所得编辑器 + Markdown 卡片</td>
+</tr>
+<tr>
+<td>💰 <strong>会员系统</strong></td>
+<td>内置订阅付费、邮件通讯功能</td>
+</tr>
+<tr>
+<td>📧 <strong>Newsletter</strong></td>
+<td>原生邮件推送，可替代 Substack</td>
+</tr>
+<tr>
+<td>🎨 <strong>Casper 主题</strong></td>
+<td>官方主题极美，排版一流</td>
+</tr>
+<tr>
+<td>🔌 <strong>Headless 模式</strong></td>
+<td>可作为 Headless CMS 供前端框架调用</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%93%8A-%E5%AF%B9%E6%AF%94%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2">📊 对比静态博客</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph LR<br>    subgraph "静态博客 (Hexo/Hugo)"<br>        A1[写作] --&gt; A2[构建] --&gt; A3[部署 HTML]<br>        A3 --&gt; A4[CDN 加速]<br>    end<br>    <br>    subgraph "动态博客 (Ghost)"<br>        B1[在线编辑] --&gt; B2[实时发布]<br>        B2 --&gt; B3[数据库驱动]<br>        B3 --&gt; B4[服务端渲染]<br>    end<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>写作体验最佳</strong>：编辑器体验远超静态博客</li>
+<li>✅ <strong>商业化能力</strong>：会员 + 付费订阅开箱即用</li>
+<li>❌ <strong>需要服务器</strong>：Node.js + MySQL，有运维成本</li>
+<li>❌ <strong>免费版功能受限</strong>：Ghost(Pro) 托管费用较高</li>
+</ul>
+<hr>
+<h2><span id="7-wordpress--%E5%85%A8%E7%90%83%E6%9C%80%E6%B5%81%E8%A1%8C%E7%9A%84-cms">7. WordPress — 全球最流行的 CMS</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://s.w.org/images/wmark.png" alt="WordPress" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://wordpress.org/">https://wordpress.org</a><br><strong>全球市场份额</strong>: 🌍 <strong>43%</strong> 的网站使用 WordPress<br><strong>首发年份</strong>: 2003</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🌍 <strong>市场占有率第一</strong></td>
+<td>全球 43% 的网站运行在 WordPress 上</td>
+</tr>
+<tr>
+<td>🧩 <strong>60000+ 插件</strong></td>
+<td>电商、SEO、表单、缓存…应有尽有</td>
+</tr>
+<tr>
+<td>🎨 <strong>10000+ 主题</strong></td>
+<td>从免费到高级定制，选择极多</td>
+</tr>
+<tr>
+<td>👥 <strong>用户角色管理</strong></td>
+<td>管理员、编辑、作者等多角色支持</td>
+</tr>
+<tr>
+<td>🔌 <strong>REST API</strong></td>
+<td>可作为 Headless CMS 对接现代前端</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%93%8A-%E7%94%9F%E6%80%81%E8%A7%84%E6%A8%A1">📊 生态规模</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">WordPress 生态<br>├── 🧩 插件: 60,000+<br>├── 🎨 主题: 10,000+<br>├── 🌍 翻译: 200+ 语言<br>├── 👥 社区: 全球数百万用户<br>└── 💼 电商: WooCommerce 覆盖 30% 在线商店<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>功能最全面</strong>：从博客到电商，什么都能做</li>
+<li>✅ <strong>零代码建站</strong>：拖拽式编辑器，非开发者友好</li>
+<li>✅ <strong>生态无敌</strong>：插件和主题数量碾压一切</li>
+<li>❌ <strong>性能优化复杂</strong>：需要缓存插件、CDN 等额外配置</li>
+<li>❌ <strong>安全风险</strong>：热门目标，需要定期更新维护</li>
+<li>❌ <strong>PHP 技术栈</strong>：对前端开发者不友好</li>
+</ul>
+<hr>
+<h2><span id="8-astro--%E5%B2%9B%E5%B1%BF%E6%9E%B6%E6%9E%84%E9%BB%98%E8%AE%A4%E9%9B%B6-js">8. Astro — 岛屿架构，默认零 JS</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://astro.build/assets/press/astro-icon-dark.svg" alt="Astro" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://astro.build/">https://astro.build</a><br><strong>GitHub Stars</strong>: ⭐ 50k+<br><strong>首发年份</strong>: 2021</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🏝️ <strong>岛屿架构</strong></td>
+<td>页面 99% 是纯静态 HTML，交互部分像”岛屿”一样独立激活</td>
+</tr>
+<tr>
+<td>📦 <strong>默认零 JS</strong></td>
+<td>最终页面不含任何 JavaScript，除非你明确需要</td>
+</tr>
+<tr>
+<td>🔌 <strong>多框架混用</strong></td>
+<td>同一页面可同时使用 React、Vue、Svelte、Solid 组件</td>
+</tr>
+<tr>
+<td>📝 <strong>内容优先</strong></td>
+<td>Markdown / MDX 原生支持，Content Collections API 管理内容</td>
+</tr>
+<tr>
+<td>⚡ <strong>极致性能</strong></td>
+<td>默认 Lighthouse 满分，首屏加载极快</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4">🔧 核心命令</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm create astro@latest       <span class="hljs-comment"># 创建项目</span><br>npm run dev                   <span class="hljs-comment"># 本地预览</span><br>npm run build                 <span class="hljs-comment"># 构建</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%B2%9B%E5%B1%BF%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F">📊 岛屿架构示意</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">传统 SPA 框架（如 Gatsby）：<br>┌──────────────────────────────────┐<br>│         整页都是 JS 水合           │  ← 200KB+ JS<br>│  ┌──────┐ ┌──────┐ ┌──────┐     │<br>│  │ Nav  │ │ 内容  │ │ 评论  │     │<br>│  └──────┘ └──────┘ └──────┘     │<br>└──────────────────────────────────┘<br><br>Astro 岛屿架构：<br>┌──────────────────────────────────┐<br>│  Nav（纯HTML）  │  内容（纯HTML）  │  ← 零 JS！<br>│                 │                │<br>│          ┌──────┴──────┐         │<br>│          │ 评论区(React) │         │  ← 只有这个加载 JS<br>│          └─────────────┘         │<br>└──────────────────────────────────┘<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E4%B8%8E-hexo--hugo-%E7%9A%84%E5%85%B3%E7%B3%BB">📊 与 Hexo / Hugo 的关系</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>    subgraph "传统静态博客"<br>        A1[Hexo] --&gt; B1[纯静态 HTML]<br>        A2[Hugo] --&gt; B1<br>    end<br>    <br>    subgraph "现代混合框架"<br>        C1[Astro] --&gt; D1[静态 HTML + 按需 JS]<br>        C2[Next.js] --&gt; D1<br>        C3[Gatsby] --&gt; D1<br>    end<br>    <br>    B1 --&gt; E[极致性能]<br>    D1 --&gt; E<br>    D1 --&gt; F[丰富交互]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>性能天花板极高</strong>：默认零 JS，Lighthouse 满分是常态</li>
+<li>✅ <strong>框架无关</strong>：React/Vue/Svelte 组件可以混在同一页面</li>
+<li>✅ <strong>学习曲线温和</strong>：<code>.astro</code> 文件语法接近 HTML，上手极快</li>
+<li>✅ <strong>View Transitions</strong>：内置页面过渡动画，SPA 般的浏览体验</li>
+<li>❌ <strong>不适合高交互应用</strong>：不适合做在线协作工具、后台管理等</li>
+<li>❌ <strong>相对年轻</strong>：2021 年才发布，部分边缘场景生态不够完善</li>
+</ul>
+<hr>
+<h2><span id="%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9">如何选择？</span></h2><h3><span id="%F0%9F%8E%AF-%E6%8C%89%E5%9C%BA%E6%99%AF%E6%8E%A8%E8%8D%90">🎯 按场景推荐</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">flowchart TD<br>    A[你想搭建什么？] --&gt; B{你是开发者吗？}<br>    <br>    B --&gt;|是| C{主要用途？}<br>    B --&gt;|否| D[WordPress&lt;br/&gt;零代码，功能全]<br>    <br>    C --&gt;|技术博客| E{熟悉什么框架？}<br>    C --&gt;|技术文档| F[VitePress&lt;br/&gt;文档体验最佳]<br>    C --&gt;|作品展示| G[Astro&lt;br/&gt;框架灵活，性能极致]<br>    <br>    E --&gt;|Vue| H[VitePress 或 Hexo]<br>    E --&gt;|React| I[Astro 或 Gatsby]<br>    E --&gt;|无偏好| J{在乎构建速度？}<br>    <br>    J --&gt;|是| K[Hugo&lt;br/&gt;毫秒级构建]<br>    J --&gt;|否| L[Hexo&lt;br/&gt;中文生态好]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%86%B3%E7%AD%96%E7%9F%A9%E9%98%B5">📊 决策矩阵</span></h3><table>
+<thead>
+<tr>
+<th>你的需求</th>
+<th>推荐框架</th>
+<th>一句话理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🎓 <strong>初学者入门</strong></td>
+<td><strong>Hexo</strong></td>
+<td>中文教程多，部署最简单</td>
+</tr>
+<tr>
+<td>⚡ <strong>追求构建速度</strong></td>
+<td><strong>Hugo</strong></td>
+<td>万篇文章秒级构建</td>
+</tr>
+<tr>
+<td>🏠 <strong>GitHub 免费托管</strong></td>
+<td><strong>Jekyll</strong></td>
+<td>GitHub Pages 原生支持</td>
+</tr>
+<tr>
+<td>⚛️ <strong>React 开发者</strong></td>
+<td><strong>Gatsby</strong></td>
+<td>React + GraphQL 现代化</td>
+</tr>
+<tr>
+<td>📖 <strong>写技术文档</strong></td>
+<td><strong>VitePress</strong></td>
+<td>Vite 驱动，秒级热更新</td>
+</tr>
+<tr>
+<td>💰 <strong>内容变现</strong></td>
+<td><strong>Ghost</strong></td>
+<td>内置会员 + 付费订阅</td>
+</tr>
+<tr>
+<td>🏪 <strong>全能型站点</strong></td>
+<td><strong>WordPress</strong></td>
+<td>插件生态无可匹敌</td>
+</tr>
+<tr>
+<td>🏝️ <strong>混合框架灵活性</strong></td>
+<td><strong>Astro</strong></td>
+<td>多框架混用 + 零 JS 默认</td>
+</tr>
+</tbody></table>
+<hr>
+<h2><span id="%F0%9F%8F%81-%E6%80%BB%E7%BB%93">🏁 总结</span></h2><table>
+<thead>
+<tr>
+<th></th>
+<th>Hexo</th>
+<th>Hugo</th>
+<th>Jekyll</th>
+<th>Gatsby</th>
+<th>VitePress</th>
+<th>Ghost</th>
+<th>WordPress</th>
+<th>Astro</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>类型</strong></td>
+<td>静态</td>
+<td>静态</td>
+<td>静态</td>
+<td>静态</td>
+<td>静态</td>
+<td>动态</td>
+<td>动态</td>
+<td>静态</td>
+</tr>
+<tr>
+<td><strong>速度</strong></td>
+<td>⚡⚡</td>
+<td>⚡⚡⚡</td>
+<td>⚡⚡</td>
+<td>⚡</td>
+<td>⚡⚡⚡</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>⚡⚡⚡</td>
+</tr>
+<tr>
+<td><strong>上手难度</strong></td>
+<td>易</td>
+<td>中</td>
+<td>易</td>
+<td>难</td>
+<td>中</td>
+<td>中</td>
+<td>易</td>
+<td>中</td>
+</tr>
+<tr>
+<td><strong>中文资源</strong></td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td><strong>主题数量</strong></td>
+<td>300+</td>
+<td>400+</td>
+<td>200+</td>
+<td>300+</td>
+<td>50+</td>
+<td>100+</td>
+<td>10000+</td>
+<td>200+</td>
+</tr>
+<tr>
+<td><strong>适用规模</strong></td>
+<td>中小型</td>
+<td>任意</td>
+<td>中小型</td>
+<td>中大型</td>
+<td>文档站</td>
+<td>中大型</td>
+<td>任意</td>
+<td>中小型</td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<p>💡 <strong>个人推荐</strong>：如果你刚入门，<strong>Hexo + GitHub Pages</strong> 是最省心的组合；追求极致性能选 <strong>Hugo</strong>；想要现代开发体验和框架灵活性选 <strong>Astro</strong>；做技术文档站必选 <strong>VitePress</strong>；想要商业变现上 <strong>Ghost</strong>。</p>
+</blockquote>
+<hr>
+<p><em>📅 更新于 2026-06-27 · 如有疑问欢迎讨论</em></p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>TT清沫uk<br>
+        <strong>本文链接：</strong><a href="https://ttquk.github.io/2026/06/27/%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94%E6%8C%87%E5%8D%97/" title="https:&#x2F;&#x2F;ttquk.github.io&#x2F;2026&#x2F;06&#x2F;27&#x2F;博客框架对比指南&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;ttquk.github.io&#x2F;2026&#x2F;06&#x2F;27&#x2F;博客框架对比指南&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			      
+			<!-- 在找到当前文章所在的 index -->
+			    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2026/03/28/hello-world/"> Hello World</a>
+			</div>
+			       
+			<!-- 下一篇文章 -->
+			<div class="new">
+				<span>下一章</span>
+				<a href="/2026/06/27/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94%E6%8C%87%E5%8D%97/"> 💬静态博客评论系统对比指南</a>
+			</div>
+			                          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Hexo/" rel="tag">Hexo</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="TTquk/comments"
+      data-repo-id="R_kgDORzOO3A"
+      data-category="Announcements"
+      data-category-id="DIC_kwDORzOO3M4C5ejm"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

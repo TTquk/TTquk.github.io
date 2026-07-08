@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 💬静态博客评论系统对比指南 -  TT清沫ukの博客</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5201753_g7fgu4u1tlr.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://ts1.tc.mm.bing.net/th/id/OIP-C.ifh8a4Z3Q7l8q5Cm1pnN5AHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://static.kivo.wiki/images/gallery/1.%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85CG/Vol.1/BG_CS_Abydos_01.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="TT清沫ukの博客">
+        <img
+			src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			alt="TT清沫uk"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" title="TT清沫uk">
+			<img
+				src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+				alt="TT清沫uk"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>11</div>
+		<div><span>标签</span>25</div>
+		<div><span>分类</span>6</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"
+			title="开往"
+		>
+			<i
+				class="kirafont
+					
+						icon-huoche
+					"
+			></i>
+			<div class="kira-list-item-content">
+				开往
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<去掉尖括号后填上你的QQ号>&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/3546738451286034"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/TTquk/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/Linux/">
+              Linux
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/博客/">
+              博客
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/游戏/">
+              游戏
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/社会心理/">
+              社会心理
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/网络安全/">
+              网络安全
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/读书笔记/">
+              读书笔记
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/CC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">CC攻击</a> <a href="/tags/DDoS/" style="font-size: 10px;">DDoS</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Kali/" style="font-size: 20px;">Kali</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MC/" style="font-size: 10px;">MC</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%86%85%E5%8D%B7/" style="font-size: 10px;">内卷</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 10px;">基础教程</a> <a href="/tags/%E5%A4%9A%E5%B7%B4%E8%83%BA/" style="font-size: 10px;">多巴胺</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E7%82%B9%E8%B5%9E/" style="font-size: 10px;">点赞</a> <a href="/tags/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/" style="font-size: 10px;">社交媒体</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/" style="font-size: 10px;">社会工程学</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83/" style="font-size: 10px;">社会比较</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">评论系统</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">钓鱼攻击</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">11</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">TT清沫uk</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		<a href="https://icp.gov.moe/?keyword=20266328" target="_blank">萌ICP备20266328号</a>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://static.kivo.wiki/images/gallery/1.%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85CG/Vol.1/BG_CS_Abydos_01.jpg"
+				data-sizes="auto"
+				alt="💬静态博客评论系统对比指南"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>💬静态博客评论系统对比指南</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年06月27日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2.6k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 11 分钟</a>
+		</div>
+		<html><head></head><body><blockquote>
+<p>静态博客没有后端数据库，评论功能全靠第三方服务。本文从<strong>数据存储、隐私、成本、界面、国内可用性</strong>五个维度，全面对比主流评论方案。</p>
+</blockquote>
+<h2><span id="%F0%9F%93%8B-%E7%9B%AE%E5%BD%95">📋 目录</span></h2><ol>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%AC%AC%E4%B8%89%E6%96%B9%E8%AF%84%E8%AE%BA">为什么需要第三方评论？</a></li>
+<li><a href="#%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94%E6%80%BB%E8%A7%88">方案对比总览</a></li>
+<li><a href="#1-giscus--github-discussions-%E9%A9%B1%E5%8A%A8">Giscus — GitHub Discussions 驱动</a></li>
+<li><a href="#2-waline--%E5%9B%BD%E4%BA%A7%E5%BC%80%E6%BA%90%E5%85%A8%E8%83%BD%E7%8E%8B">Waline — 国产开源全能王</a></li>
+<li><a href="#3-twikoo--%E8%85%BE%E8%AE%AF%E4%BA%91%E5%87%BD%E6%95%B0%E8%BD%BB%E9%87%8F%E6%96%B9%E6%A1%88">Twikoo — 腾讯云函数轻量方案</a></li>
+<li><a href="#4-utterances--%E6%9E%81%E7%AE%80-github-issues-%E8%AF%84%E8%AE%BA">utterances — 极简 GitHub Issues 评论</a></li>
+<li><a href="#5-disqus--%E5%85%A8%E7%90%83%E6%9C%80%E8%80%81%E7%89%8C%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F">Disqus — 全球最老牌评论系统</a></li>
+<li><a href="#6-artalk--%E5%9B%BD%E4%BA%A7%E6%96%B0%E6%98%9F%E8%87%AA%E6%89%98%E7%AE%A1%E6%96%B9%E6%A1%88">Artalk — 国产新星自托管方案</a></li>
+<li><a href="#7-gitalk--github-issues-%E7%9A%84%E5%8F%A4%E5%85%B8%E6%96%B9%E6%A1%88">Gitalk — GitHub Issues 的古典方案</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9">如何选择？</a></li>
+</ol>
+<hr>
+<h2><span id="%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%AC%AC%E4%B8%89%E6%96%B9%E8%AF%84%E8%AE%BA">为什么需要第三方评论？</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph LR<br>    A[静态博客&lt;br/&gt;纯 HTML/JS] --&gt; B{需要评论功能}<br>    B --&gt; C[第三方评论系统]<br>    C --&gt; D[自托管数据库]<br>    C --&gt; E[GitHub Issues]<br>    C --&gt; F[SaaS 服务]<br></code></pre></td></tr></tbody></table></figure>
+
+<p>静态博客只是一堆 HTML 文件，没有后端、没有数据库。要实现评论，要么自己搭后端，要么接入第三方服务——后者才是主流做法。</p>
+<hr>
+<h2><span id="%E6%96%B9%E6%A1%88%E5%AF%B9%E6%AF%94%E6%80%BB%E8%A7%88">方案对比总览</span></h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">┌──────────┬──────────────┬──────────┬──────────┬───────────┬──────────────┐<br>│   系统   │  数据存储     │  免费？  │ 国内速度  │  隐私性   │  上手难度    │<br>├──────────┼──────────────┼──────────┼──────────┼───────────┼──────────────┤<br>│  Giscus  │ GitHub 讨论   │   ✅    │   ⚡⚡    │   ⭐⭐⭐  │   极简       │<br>│  Waline  │ 自托管/SaaS  │   ✅    │   ⚡⚡⚡  │   ⭐⭐⭐  │   中等       │<br>│  Twikoo  │ 腾讯云/自托管 │   ✅    │   ⚡⚡⚡  │   ⭐⭐⭐  │   中等       │<br>│utterances│ GitHub Issues │   ✅    │   ⚡⚡    │   ⭐⭐⭐  │   极简       │<br>│  Disqus  │ 官方服务器    │   ⚠️   │   ⚡     │   ⭐     │   极简       │<br>│  Artalk  │ 自托管        │   ✅    │   ⚡⚡⚡  │   ⭐⭐⭐  │   中等       │<br>│  Gitalk  │ GitHub Issues │   ✅    │   ⚡⚡    │   ⭐⭐⭐  │   简单       │<br>└──────────┴──────────────┴──────────┴──────────┴───────────┴──────────────┘<br></code></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2><span id="1-giscus--github-discussions-%E9%A9%B1%E5%8A%A8">1. Giscus — GitHub Discussions 驱动</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://opengraph.githubassets.com/1/giscus/giscus" alt="Giscus" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://giscus.app/">https://giscus.app</a><br><strong>GitHub Stars</strong>: ⭐ 9k+<br><strong>数据存储</strong>: GitHub Discussions API</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🗣️ <strong>GitHub Discussions</strong></td>
+<td>利用 GitHub 原生的讨论功能，管理体验好</td>
+</tr>
+<tr>
+<td>🎨 <strong>自动适配主题</strong></td>
+<td>自动跟随系统亮暗模式，无需手动配置</td>
+</tr>
+<tr>
+<td>❤️ <strong>反应表情</strong></td>
+<td>评论可以点赞、踩、爱心等 GitHub 原生反应</td>
+</tr>
+<tr>
+<td>📧 <strong>回复通知</strong></td>
+<td>被回复时 GitHub 会发邮件通知</td>
+</tr>
+<tr>
+<td>🌍 <strong>多语言</strong></td>
+<td>支持中文等 20+ 种语言</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8Fhexo-%E7%A4%BA%E4%BE%8B">🔧 集成方式（Hexo 示例）</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Hexo 只需在主题配置中添加</span><br>npm install hexo-next-giscus --save<br></code></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight yml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># _config.next.yml</span><br><span class="hljs-attr">giscus:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">yourname/yourname.github.io</span><br>  <span class="hljs-attr">repo_id:</span> <span class="hljs-string">"MDEwOlJlcG9zaXRvcn..."</span><br>  <span class="hljs-attr">category:</span> <span class="hljs-string">Announcements</span><br>  <span class="hljs-attr">category_id:</span> <span class="hljs-string">"DIC_kwDO..."</span><br>  <span class="hljs-attr">mapping:</span> <span class="hljs-string">pathname</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">📊 工作流程</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">sequenceDiagram<br>    participant 读者<br>    participant 博客页面<br>    participant Giscus API<br>    participant GitHub Discussions<br>    <br>    读者-&gt;&gt;博客页面: 访问文章<br>    博客页面-&gt;&gt;Giscus API: 请求评论（按 pathname）<br>    Giscus API-&gt;&gt;GitHub Discussions: 查询 Discussion<br>    GitHub Discussions--&gt;&gt;Giscus API: 返回评论数据<br>    Giscus API--&gt;&gt;博客页面: 渲染评论区<br>    读者-&gt;&gt;博客页面: 发表评论<br>    博客页面-&gt;&gt;Giscus API: 授权 OAuth<br>    Giscus API-&gt;&gt;GitHub Discussions: 写入评论<br>    GitHub Discussions--&gt;&gt;读者: 评论发表成功<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>零成本零运维</strong>：数据在 GitHub，GitHub 不挂它就活着</li>
+<li>✅ <strong>界面精美</strong>：和 GitHub 风格统一，支持亮暗切换</li>
+<li>✅ <strong>评论者需 GitHub 账号</strong>：天然防 spam</li>
+<li>❌ <strong>评论者需 GitHub 账号</strong>：非程序员可能望而却步</li>
+<li>❌ <strong>依赖 GitHub</strong>：GitHub 被墙则不可用（国内偶尔不稳定）</li>
+</ul>
+<hr>
+<h2><span id="2-waline--%E5%9B%BD%E4%BA%A7%E5%BC%80%E6%BA%90%E5%85%A8%E8%83%BD%E7%8E%8B">2. Waline — 国产开源全能王</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://raw.githubusercontent.com/walinejs/waline/main/assets/logo.png" alt="Waline" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://waline.js.org/">https://waline.js.org</a><br><strong>GitHub Stars</strong>: ⭐ 2.5k+<br><strong>数据存储</strong>: 自托管（LeanCloud / MySQL / SQLite / 等）</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🔒 <strong>数据完全自主</strong></td>
+<td>评论数据存在你自己的数据库里</td>
+</tr>
+<tr>
+<td>👤 <strong>多种登录方式</strong></td>
+<td>支持 QQ、微信、GitHub、Twitter 等社交登录</td>
+</tr>
+<tr>
+<td>📧 <strong>邮件通知</strong></td>
+<td>博主和评论者均可收到邮件提醒</td>
+</tr>
+<tr>
+<td>📊 <strong>评论统计</strong></td>
+<td>内置阅读量统计、评论数统计</td>
+</tr>
+<tr>
+<td>🖼️ <strong>图片上传</strong></td>
+<td>评论区支持粘贴图片上传</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2vercel-%E4%B8%80%E9%94%AE">🔧 快速部署（Vercel 一键）</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 方式一：Vercel 部署（推荐，免费）</span><br><span class="hljs-comment"># 访问 https://vercel.com/new/clone?repository-url=https://github.com/walinejs/waline</span><br><br><span class="hljs-comment"># 方式二：Docker 部署</span><br>docker run -d \<br>  -e LEAN_ID=xxx \<br>  -e LEAN_KEY=xxx \<br>  -e LEAN_MASTER_KEY=xxx \<br>  -p 8360:8360 \<br>  lizheming/waline<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F">📊 架构示意</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>    subgraph "前端"<br>        A[博客页面]<br>        B[Waline 客户端]<br>    end<br>    <br>    subgraph "服务端（你的 Vercel）"<br>        C[Waline Server]<br>    end<br>    <br>    subgraph "数据存储（选其一）"<br>        D1[LeanCloud]<br>        D2[MySQL]<br>        D3[SQLite]<br>        D4[MongoDB]<br>    end<br>    <br>    subgraph "通知"<br>        E1[邮件通知]<br>        E2[微信通知]<br>    end<br>    <br>    A --&gt; B<br>    B --&gt; C<br>    C --&gt; D1<br>    C --&gt; D2<br>    C --&gt; D3<br>    C --&gt; D4<br>    C --&gt; E1<br>    C --&gt; E2<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>国内体验极佳</strong>：支持微信/QQ 登录，国内访问快</li>
+<li>✅ <strong>数据自主可控</strong>：数据库完全在你手里</li>
+<li>✅ <strong>功能最全面</strong>：登录、通知、图片、统计一应俱全</li>
+<li>❌ <strong>需要部署服务端</strong>：虽然是免费的，但有一点点门槛</li>
+<li>❌ <strong>数据迁移麻烦</strong>：换数据库需要手动迁移</li>
+</ul>
+<hr>
+<h2><span id="3-twikoo--%E8%85%BE%E8%AE%AF%E4%BA%91%E5%87%BD%E6%95%B0%E8%BD%BB%E9%87%8F%E6%96%B9%E6%A1%88">3. Twikoo — 腾讯云函数轻量方案</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://twikoo.js.org/twikoo-logo.png" alt="Twikoo" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://twikoo.js.org/">https://twikoo.js.org</a><br><strong>GitHub Stars</strong>: ⭐ 1.7k+<br><strong>数据存储</strong>: 腾讯云 CloudBase / 自托管 MongoDB / Vercel</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>☁️ <strong>腾讯云原生</strong></td>
+<td>可直接部署在腾讯云 CloudBase（有免费额度）</td>
+</tr>
+<tr>
+<td>🎨 <strong>现代 UI</strong></td>
+<td>界面简洁美观，支持暗色模式</td>
+</tr>
+<tr>
+<td>🔔 <strong>多种通知</strong></td>
+<td>邮件、微信、Pushover 多渠道通知</td>
+</tr>
+<tr>
+<td>📦 <strong>反垃圾</strong></td>
+<td>内置 Akismet 反垃圾 + 敏感词过滤</td>
+</tr>
+<tr>
+<td>🔒 <strong>密码保护</strong></td>
+<td>可设置博主密码，只有你能管理评论</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">🔧 快速开始</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 方式一：腾讯云 CloudBase（国内用户推荐）</span><br><span class="hljs-comment"># 访问 https://console.cloud.tencent.com/tcb</span><br><br><span class="hljs-comment"># 方式二：Vercel + MongoDB</span><br><span class="hljs-comment"># 一键克隆部署到 Vercel</span><br><br><span class="hljs-comment"># 方式三：Docker</span><br>docker run -d \<br>  -e TWIKOO_DATA=/app/data \<br>  -v ./data:/app/data \<br>  -p 8080:8080 \<br>  imaegoo/twikoo<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%8F%8D%E5%9E%83%E5%9C%BE%E6%B5%81%E7%A8%8B">📊 反垃圾流程</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>    A[用户提交评论] --&gt; B{IP 黑名单检查}<br>    B --&gt;|命中| C[拒绝]<br>    B --&gt;|通过| D{敏感词过滤}<br>    D --&gt;|命中| E[标记待审核]<br>    D --&gt;|通过| F{Akismet 检测}<br>    F --&gt;|垃圾| G[自动标记垃圾]<br>    F --&gt;|正常| H[发布成功]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>腾讯云免费额度够用</strong>：个人博客完全够用</li>
+<li>✅ <strong>部署简单</strong>：Vercel 一键部署或 Docker 一条命令</li>
+<li>✅ <strong>反垃圾能力强</strong>：多重过滤机制</li>
+<li>❌ <strong>腾讯云依赖</strong>：CloudBase 方案有厂商锁定风险</li>
+<li>❌ <strong>社区略小</strong>：相比 Waline，用户群和插件稍少</li>
+</ul>
+<hr>
+<h2><span id="4-utterances--%E6%9E%81%E7%AE%80-github-issues-%E8%AF%84%E8%AE%BA">4. utterances — 极简 GitHub Issues 评论</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://utteranc.es/utterances-logo.svg" alt="utterances" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://utteranc.es/">https://utteranc.es</a><br><strong>GitHub Stars</strong>: ⭐ 9k+<br><strong>数据存储</strong>: GitHub Issues</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🔌 <strong>零配置</strong></td>
+<td>只需在页面插入一个 <code>&lt;script&gt;</code> 标签</td>
+</tr>
+<tr>
+<td>🐙 <strong>GitHub Issues</strong></td>
+<td>每篇文章自动创建一个 Issue，评论即 Issue 评论</td>
+</tr>
+<tr>
+<td>🎨 <strong>简单干净</strong></td>
+<td>没有任何花哨功能，纯粹的评论区</td>
+</tr>
+<tr>
+<td>📧 <strong>通知</strong></td>
+<td>有人回复时 GitHub 自动发邮件</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E9%9B%86%E6%88%90%E6%9C%80%E7%AE%80%E5%8D%95">🔧 集成（最简单）</span></h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 在文章底部加入这段代码 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://utteranc.es/client.js"</span></span><br><span class="hljs-tag">  <span class="hljs-attr">repo</span>=<span class="hljs-string">"你的用户名/你的仓库名"</span></span><br><span class="hljs-tag">  <span class="hljs-attr">issue-term</span>=<span class="hljs-string">"pathname"</span></span><br><span class="hljs-tag">  <span class="hljs-attr">theme</span>=<span class="hljs-string">"github-light"</span></span><br><span class="hljs-tag">  <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span></span><br><span class="hljs-tag">  <span class="hljs-attr">async</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">📊 工作原理</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">flowchart LR<br>    A[访问 /posts/hello] --&gt; B[utterances 脚本]<br>    B --&gt; C{GitHub 搜索&lt;br/&gt;hello 的 Issue}<br>    C --&gt;|找到| D[加载 Issue 评论]<br>    C --&gt;|未找到| E[自动创建 Issue]<br>    E --&gt; D<br>    D --&gt; F[渲染评论区]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>最简单的方案</strong>：一行 HTML 搞定，甚至不需要构建工具</li>
+<li>✅ <strong>完全免费</strong>：GitHub Issues 无限制</li>
+<li>❌ <strong>功能太少</strong>：没有登录扩展、没有图片上传、没有管理后台</li>
+<li>❌ <strong>不如 Giscus</strong>：Giscus 是它的升级替代品，体验更好</li>
+</ul>
+<hr>
+<h2><span id="5-disqus--%E5%85%A8%E7%90%83%E6%9C%80%E8%80%81%E7%89%8C%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F">5. Disqus — 全球最老牌评论系统</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://disqus.com/next/apple-touch-icon-57x57.png" alt="Disqus" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://disqus.com/">https://disqus.com</a><br><strong>覆盖站点</strong>: 数百万网站<br><strong>数据存储</strong>: Disqus 官方服务器</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🌍 <strong>用户基数大</strong></td>
+<td>全球数百万人有 Disqus 账号，登录评论零门槛</td>
+</tr>
+<tr>
+<td>📊 <strong>后台管理强</strong></td>
+<td>评论审核、分析、垃圾过滤一应俱全</td>
+</tr>
+<tr>
+<td>🔔 <strong>通知完善</strong></td>
+<td>邮件通知、回复提醒</td>
+</tr>
+<tr>
+<td>📈 <strong>变现支持</strong></td>
+<td>付费版可去广告，免费版带广告</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-%E9%9B%86%E6%88%90">🔧 集成</span></h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disqus_thread"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">  <span class="hljs-keyword">var</span> disqus_config = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) {</span><br><span class="language-javascript">    <span class="hljs-variable language_">this</span>.<span class="hljs-property">page</span>.<span class="hljs-property">url</span> = <span class="hljs-string">'文章地址'</span>;</span><br><span class="language-javascript">    <span class="hljs-variable language_">this</span>.<span class="hljs-property">page</span>.<span class="hljs-property">identifier</span> = <span class="hljs-string">'文章ID'</span>;</span><br><span class="language-javascript">  };</span><br><span class="language-javascript">  (<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {</span><br><span class="language-javascript">    <span class="hljs-keyword">var</span> d = <span class="hljs-variable language_">document</span>, s = d.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">'script'</span>);</span><br><span class="language-javascript">    s.<span class="hljs-property">src</span> = <span class="hljs-string">'https://你的站点名.disqus.com/embed.js'</span>;</span><br><span class="language-javascript">    s.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">'data-timestamp'</span>, +<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>());</span><br><span class="language-javascript">    (d.<span class="hljs-property">head</span> || d.<span class="hljs-property">body</span>).<span class="hljs-title function_">appendChild</span>(s);</span><br><span class="language-javascript">  })();</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>傻瓜式接入</strong>：注册一个站点 ID，复制粘贴即可</li>
+<li>✅ <strong>功能最成熟</strong>：运营十余年，该有的功能都有</li>
+<li>❌ <strong>国内加载慢</strong>：服务器在海外，偶尔加载不出来</li>
+<li>❌ <strong>隐私争议</strong>：免费版会植入广告并追踪用户数据</li>
+<li>❌ <strong>数据不自主</strong>：所有评论存在 Disqus 服务器上</li>
+</ul>
+<hr>
+<h2><span id="6-artalk--%E5%9B%BD%E4%BA%A7%E6%96%B0%E6%98%9F%E8%87%AA%E6%89%98%E7%AE%A1%E6%96%B9%E6%A1%88">6. Artalk — 国产新星自托管方案</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://artalk.js.org/assets/img/artalk.png" alt="Artalk" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://artalk.js.org/">https://artalk.js.org</a><br><strong>GitHub Stars</strong>: ⭐ 1.8k+<br><strong>数据存储</strong>: 自托管（SQLite / MySQL / PostgreSQL）</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🎨 <strong>极简 UI</strong></td>
+<td>设计简洁，颜值在线</td>
+</tr>
+<tr>
+<td>🔒 <strong>自托管</strong></td>
+<td>一条 Docker 命令部署，数据完全自主</td>
+</tr>
+<tr>
+<td>📧 <strong>邮件通知</strong></td>
+<td>支持 SMTP 发送通知邮件</td>
+</tr>
+<tr>
+<td>📊 <strong>管理后台</strong></td>
+<td>内置管理面板，可以在线审核回复</td>
+</tr>
+<tr>
+<td>🌏 <strong>中文优先</strong></td>
+<td>国产项目，中文支持一流</td>
+</tr>
+</tbody></table>
+<h3><span id="%F0%9F%94%A7-docker-%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4">🔧 Docker 一条命令</span></h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -d \<br>  --name artalk \<br>  -p 23366:23366 \<br>  -v $(<span class="hljs-built_in">pwd</span>)/data:/data \<br>  artalk/artalk-go<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%91%8D-%E4%BC%98%E7%82%B9--%F0%9F%91%8E-%E7%BC%BA%E7%82%B9">👍 优点 &amp; 👎 缺点</span></h3><ul>
+<li>✅ <strong>部署极简</strong>：Docker 一条命令跑起来</li>
+<li>✅ <strong>界面好看</strong>：颜值在国产方案中数一数二</li>
+<li>✅ <strong>管理后台内置</strong>：不需要额外部署管理面板</li>
+<li>❌ <strong>相对小众</strong>：插件和主题生态不如 Waline 丰富</li>
+<li>❌ <strong>邮件配置略麻烦</strong>：不同邮箱服务商 SMTP 配置各不相同</li>
+</ul>
+<hr>
+<h2><span id="7-gitalk--github-issues-%E7%9A%84%E5%8F%A4%E5%85%B8%E6%96%B9%E6%A1%88">7. Gitalk — GitHub Issues 的古典方案</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://raw.githubusercontent.com/gitalk/gitalk/master/assets/logo.svg" alt="Gitalk" class="lazyload"></p>
+<p><strong>官网</strong>: <a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a><br><strong>GitHub Stars</strong>: ⭐ 7k+<br><strong>数据存储</strong>: GitHub Issues</p>
+<h3><span id="%E2%9C%A8-%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9">✨ 核心特点</span></h3><p>这是最早的 “GitHub Issues 做评论” 方案，utterances 和 Giscus 都是后来者。</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🐙 <strong>GitHub Issues</strong></td>
+<td>每篇文章自动创建 Issue</td>
+</tr>
+<tr>
+<td>🔐 <strong>OAuth App</strong></td>
+<td>需要自己注册 GitHub OAuth Application</td>
+</tr>
+<tr>
+<td>📝 <strong>经典方案</strong></td>
+<td>Hexo Next 等主题原生支持</td>
+</tr>
+</tbody></table>
+<h3><span id="%E2%9A%A0%EF%B8%8F-%E7%8E%B0%E7%8A%B6">⚠️ 现状</span></h3><blockquote>
+<p>🔴 <strong>已不推荐使用</strong>：Gitalk 维护停滞，GitHub OAuth 授权流程复杂。同类方案中 <strong>Giscus</strong> 是它的现代升级替代品，体验好得多。</p>
+</blockquote>
+<hr>
+<h2><span id="%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9">如何选择？</span></h2><h3><span id="%F0%9F%8E%AF-%E6%8C%89%E5%9C%BA%E6%99%AF%E6%8E%A8%E8%8D%90">🎯 按场景推荐</span></h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">flowchart TD<br>    A[选评论系统] --&gt; B{主要读者是谁？}<br>    <br>    B --&gt;|国内用户为主| C{愿意折腾吗？}<br>    B --&gt;|程序员/技术圈| D{在乎极致简单？}<br>    <br>    C --&gt;|愿意| E[Waline&lt;br/&gt;功能最全，生态最好]<br>    C --&gt;|不想折腾| F[Twikoo&lt;br/&gt;腾讯云免费额度够用]<br>    <br>    D --&gt;|是| G[Giscus&lt;br/&gt;零配置，体验一流]<br>    D --&gt;|否| H[Waline&lt;br/&gt;更多功能选择]<br>    <br>    B --&gt;|全球用户| I{在乎隐私？}<br>    I --&gt;|是| J[Giscus&lt;br/&gt;数据在 GitHub]<br>    I --&gt;|否| K[Disqus&lt;br/&gt;用户基数大]<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%F0%9F%93%8A-%E5%86%B3%E7%AD%96%E7%9F%A9%E9%98%B5">📊 决策矩阵</span></h3><table>
+<thead>
+<tr>
+<th>你的需求</th>
+<th>推荐系统</th>
+<th>一句话理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🎯 <strong>首选推荐（极简）</strong></td>
+<td><strong>Giscus</strong></td>
+<td>零成本、零运维、零配置，最美观</td>
+</tr>
+<tr>
+<td>🇨🇳 <strong>国内用户最佳</strong></td>
+<td><strong>Waline</strong></td>
+<td>社交登录 + 国产生态 + 功能最全</td>
+</tr>
+<tr>
+<td>☁️ <strong>腾讯云用户</strong></td>
+<td><strong>Twikoo</strong></td>
+<td>CloudBase 免费额度 + 反垃圾</td>
+</tr>
+<tr>
+<td>🗄️ <strong>数据自主可控</strong></td>
+<td><strong>Waline / Artalk</strong></td>
+<td>数据库完全归你所有</td>
+</tr>
+<tr>
+<td>🐳 <strong>Docker 爱好者</strong></td>
+<td><strong>Artalk</strong></td>
+<td>一条命令跑起来</td>
+</tr>
+<tr>
+<td>🌍 <strong>全球用户</strong></td>
+<td><strong>Disqus</strong></td>
+<td>用户基数最大，登录无障碍</td>
+</tr>
+<tr>
+<td>⚡ <strong>只要能用就行</strong></td>
+<td><strong>utterances</strong></td>
+<td>一行 HTML 完事</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>📅 更新于 2026-06-27 · 如有疑问欢迎讨论</em></p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>TT清沫uk<br>
+        <strong>本文链接：</strong><a href="https://ttquk.github.io/2026/06/27/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94%E6%8C%87%E5%8D%97/" title="https:&#x2F;&#x2F;ttquk.github.io&#x2F;2026&#x2F;06&#x2F;27&#x2F;评论系统对比指南&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;ttquk.github.io&#x2F;2026&#x2F;06&#x2F;27&#x2F;评论系统对比指南&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			         
+			<!-- 在找到当前文章所在的 index -->
+			        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2026/06/27/%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94%E6%8C%87%E5%8D%97/"> 🌐主流博客框架对比指南</a>
+			</div>
+			                          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" rel="tag">评论系统</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="TTquk/comments"
+      data-repo-id="R_kgDORzOO3A"
+      data-category="Announcements"
+      data-category-id="DIC_kwDORzOO3M4C5ejm"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>

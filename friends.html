@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 我的朋友 -  TT清沫ukの博客</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5201753_g7fgu4u1tlr.css" crossorigin />
+		
+		<link
+			rel="shortcut icon"
+			href="https://ts1.tc.mm.bing.net/th/id/OIP-C.ifh8a4Z3Q7l8q5Cm1pnN5AHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+			
+				
+<link rel="stylesheet" href="/style.css">
+
+			
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://static.kivo.wiki/images/gallery/1.%E4%B8%BB%E7%BA%BF%E5%89%A7%E6%83%85CG/Vol.1/BG_CS_Abydos_01.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="TT清沫ukの博客">
+        <img
+			src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+			alt="TT清沫uk"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" title="TT清沫uk">
+			<img
+				src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3"
+				alt="TT清沫uk"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>11</div>
+		<div><span>标签</span>25</div>
+		<div><span>分类</span>6</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple true"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"
+			title="开往"
+		>
+			<i
+				class="kirafont
+					
+						icon-huoche
+					"
+			></i>
+			<div class="kira-list-item-content">
+				开往
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<去掉尖括号后填上你的QQ号>&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/3546738451286034"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/TTquk/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
+        
+        
+
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/Linux/">
+              Linux
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/博客/">
+              博客
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/游戏/">
+              游戏
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/社会心理/">
+              社会心理
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/网络安全/">
+              网络安全
+            </a>
+            <span class="category-list-count">2</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/读书笔记/">
+              读书笔记
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/CC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">CC攻击</a> <a href="/tags/DDoS/" style="font-size: 10px;">DDoS</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Kali/" style="font-size: 20px;">Kali</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MC/" style="font-size: 10px;">MC</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%86%85%E5%8D%B7/" style="font-size: 10px;">内卷</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 10px;">基础教程</a> <a href="/tags/%E5%A4%9A%E5%B7%B4%E8%83%BA/" style="font-size: 10px;">多巴胺</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 10px;">心理学</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E7%82%B9%E8%B5%9E/" style="font-size: 10px;">点赞</a> <a href="/tags/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/" style="font-size: 10px;">社交媒体</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6/" style="font-size: 10px;">社会工程学</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E6%AF%94%E8%BE%83/" style="font-size: 10px;">社会比较</a> <a href="/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">评论系统</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E9%92%93%E9%B1%BC%E6%94%BB%E5%87%BB/" style="font-size: 10px;">钓鱼攻击</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">11</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">TT清沫uk</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		<a href="https://icp.gov.moe/?keyword=20266328" target="_blank">萌ICP备20266328号</a>
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					<div class="kira-post">
+	<article class="kira-friend">
+		<html><head></head><body><h2><span id="%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%8F%8B%E9%93%BE">欢迎加友链！！！</span></h2><p><strong>名称:</strong></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TT清沫uk<br></code></pre></td></tr></tbody></table></figure>
+<p><strong>地址:</strong></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://ttquk.netlify.app<br></code></pre></td></tr></tbody></table></figure>
+<p><strong>头像:</strong></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://ts1.tc.mm.bing.net/th/id/OIP-C.6WsD9caLSNQFhJOi77soRAHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;<span class="hljs-built_in">rm</span>=3<br></code></pre></td></tr></tbody></table></figure>
+<p><strong>简介:</strong></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">TT清沫ukの博客<br></code></pre></td></tr></tbody></table></figure>
+</body></html>
+        
+
+<link rel="stylesheet" href="/css/kira-friends.css">
+
+<div style="display: flex; flex-wrap: wrap; width: 100%; position: relative;">
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://blog.olinl.com" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=9892214&amp;spec=0" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">顾拾柒</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://090909.top" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://090909.top/assets/images/logo.ico" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">他说</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://blog.cuteleaf.cn" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">夏夜流萤</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://xinyang-gao.github.io" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://xinyang-gao.github.io/assets/avatar.webp" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">高新炀</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://gcweb.cc" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://www.gcweb.cc/static/img/pig.jpg" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">gc的小站</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://cynosura.one/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://cynosura.one/_astro/profile-avatar.C65s8z-Z_Z2lHCL7.webp" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">赤茶</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://www.timochan.cn/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://www.timochan.cn/api/objects/icon/9s6tbcvax674yv2m88.jpg" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">timochan</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://www.azusemisa.top" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://azusemisa.top/img/avatar.webp" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">Azusemisa</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://xfcnl.github.io/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://raw.githubusercontent.com/xfcnl/xfcnl.github.io/refs/heads/main/image/MEITU_20260128_220225596.jpg" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">xf_blog</div>
+      </a>
+    </div>
+  
+</div>
+<hr />
+
+
+	</article>
+	
+        <div class="kira-post-footer">
+            
+
+            
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="TTquk/comments"
+      data-repo-id="R_kgDORzOO3A"
+      data-category="Announcements"
+      data-category-id="DIC_kwDORzOO3M4C5ejm"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+        </div>
+    
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
