@@ -4,6 +4,7 @@ layout: friends
 ---
 
 ## 欢迎加友链！！！
+### 这是我的分网站，由GitHub page托管，主网站为ttquk.netlify.app,内容同步更新
 **名称:**
 ```bash
 TT清沫uk

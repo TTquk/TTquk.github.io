@@ -8,7 +8,7 @@ favicon:
     type: image/png # 图标类型，可能的值有(image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
 
 # 附加图标库 使用说明：https://kira.host/hexo/config/icon.html
-iconlib: //at.alicdn.com/t/c/font_5201753_g7fgu4u1tlr.css
+iconlib: //at.alicdn.com/t/c/font_5201753_9ry2opdwhy.css
 
 cdn: # 这里可以修改站点使用的库的CDN
     gitalk:
@@ -65,6 +65,11 @@ social:
         - icon-gitee
         - rgb(165, 15, 15)
         - rgba(165, 15, 15, .15)
+    RSS:
+        - /atom.xml
+        - icon-rss
+        - rgb(242, 101, 34)
+        - rgba(242, 101, 34, .15)
 
 color: # 配色方案，从first到seventh为优先级为1-7的颜色，默认为彩虹配色
     first: # 同时作为主题色
@@ -160,6 +165,17 @@ friends:
       avatar: https://raw.githubusercontent.com/xfcnl/xfcnl.github.io/refs/heads/main/image/MEITU_20260128_220225596.jpg
       link: https://xfcnl.github.io/
       name: xf_blog
-
+    -
+      avatar: https://q.qlogo.cn/headimg_dl?dst_uin=1432777209&spec=640&img_type=jpg
+      link: https://blog.xiaofengqwq.com
+      name: Welcome to - 小枫_QWQ的Blog
+    -
+      avatar: https://markxu.icu/images/IMG_1766.JPG
+      link: https://markxu.icu
+      name: Mark 的自留地
+    -
+      avatar: https://static.owo.cab/avatar.webp
+      link: https://owo.cab/
+      name: zhxycn
 # 可复制的代码块
 copyableCodeblock: true
