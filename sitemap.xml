@@ -181,13 +181,6 @@
   </url>
   
   <url>
-    <loc>https://ttquk.github.io/tags/MC/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ttquk.github.io/tags/%E8%80%83%E8%AF%95/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -202,14 +195,7 @@
   </url>
   
   <url>
-    <loc>https://ttquk.github.io/tags/Hexo/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ttquk.github.io/tags/%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://ttquk.github.io/tags/MC/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -245,6 +231,20 @@
   
   <url>
     <loc>https://ttquk.github.io/tags/ssh/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttquk.github.io/tags/Hexo/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttquk.github.io/tags/%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -344,13 +344,6 @@
   </url>
   
   <url>
-    <loc>https://ttquk.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ttquk.github.io/categories/%E7%89%A9%E7%90%86/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -358,7 +351,7 @@
   </url>
   
   <url>
-    <loc>https://ttquk.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://ttquk.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -366,6 +359,13 @@
   
   <url>
     <loc>https://ttquk.github.io/categories/Linux/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttquk.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
