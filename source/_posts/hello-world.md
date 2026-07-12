@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: 2026-03-28 21:17:00
+description: 我的第一篇博客文章，记录使用 Hexo 和 Kira 主题搭建个人博客的过程与心得。
 categories:
   - 博客
 tags:

@@ -1,6 +1,7 @@
 ---
 title: 🔐SSH连接服务器完整教程
 date: 2026-06-27 19:02:00
+description: 从零开始的 SSH 连接服务器完整教程，涵盖密钥生成、端口配置、安全加固和常见问题排查，适用于 Linux 服务器管理。
 categories:
   - Linux
 tags:

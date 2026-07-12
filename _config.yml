@@ -7,6 +7,11 @@ title: TT清沫ukの博客
 subtitle: ''
 description: 'Record Moments'
 keywords:
+  - 博客
+  - 技术
+  - 物理
+  - 读书笔记
+  - 网络安全
 author: TT清沫uk
 language: zh-CN
 timezone: ''
@@ -102,9 +107,10 @@ theme: kira
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/TTquk/TTquk.github.io.git
-  branch: main
+  - type: git
+    repo: https://github.com/TTquk/TTquk.github.io.git
+    branch: main
+  - type: hexo-seo-submit
 
 aplayer:
   asset_inject: false # 禁止 aplayer 注入资源
@@ -128,3 +134,12 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+# SEO Auto Submit
+## Docs: https://github.com/tardis-ksh/hexo-seo-submit
+hexo-seo-submit:
+  sortBy: updated
+  count: 10
+  bing:
+    enable: true
+    apiKey: 6ed6867cca9e491eb61a19aad6a3b71a

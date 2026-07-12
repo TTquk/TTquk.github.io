@@ -1,6 +1,7 @@
 ---
 title: 🐧Linux命令教程大全-从入门到精通
 date: 2026-06-27 19:30:00
+description: 最全的 Linux 命令教程，从基础入门到高级技巧，涵盖文件操作、权限管理、进程控制、网络配置等常用 Shell 命令详解。
 categories:
   - Linux
 tags:
