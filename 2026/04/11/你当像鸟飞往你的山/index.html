@@ -488,11 +488,11 @@
   
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			                  
+			                      
 			<!-- 先找到与当前文字相同的目录 -->
 			   
 			<!-- 在找到当前文章所在的 index -->
-			                  
+			              
 		</nav>
 	</div>
 	
@@ -612,9 +612,31 @@
 				}, 500);
 			}
 
+			// 1. 页面关闭/跳转前保存状态
 			window.addEventListener('beforeunload', saveState);
+
+			// 2. 页面切换到后台时也保存（兼容性更好）
+			document.addEventListener('visibilitychange', function() {
+				if (document.hidden) saveState();
+			});
+
+			// 3. 页面从 BFCache 恢复时（前进/后退），无需执行脚本，但音频可能已暂停
+			window.addEventListener('pageshow', function(e) {
+				if (e.persisted) {
+					// 页面从 BFCache 恢复，JS 状态保留了，但 audio 元素可能暂停了
+					setTimeout(function() {
+						var ap = document.querySelector('meting-js')?.aplayer;
+						if (ap && ap.audio && ap.audio.paused) ap.play();
+					}, 500);
+				}
+			});
+
+			// 4. 页面加载后恢复状态
 			if (document.readyState === 'complete') restoreState();
 			else window.addEventListener('load', restoreState);
+
+			// 5. 定期保存（兜底：页面被意外关闭时至少有一些进度被保存）
+			setInterval(saveState, 30000);
 		})();
 		</script>
 	</body>
