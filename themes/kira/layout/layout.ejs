@@ -86,5 +86,85 @@
 			listmaxheight="340px"
 			api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r">
 		</meting-js>
+		<script>
+		// 播放器状态持久化 - 刷新/跳转页面后恢复播放进度
+		(function() {
+			var STORAGE_KEY = 'kira-aplayer-state';
+
+			function saveState() {
+				var meting = document.querySelector('meting-js');
+				var ap = meting ? meting.aplayer : null;
+				if (ap && ap.list) {
+					try {
+						localStorage.setItem(STORAGE_KEY, JSON.stringify({
+							index: ap.list.index,
+							time: ap.audio ? ap.audio.currentTime : 0,
+							volume: ap.volume()
+						}));
+					} catch(e) {}
+				}
+			}
+
+			function restoreState() {
+				var saved;
+				try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch(e) {}
+				if (!saved) return;
+
+				var timer = setInterval(function() {
+					var meting = document.querySelector('meting-js');
+					var ap = meting ? meting.aplayer : null;
+					if (ap && ap.list && ap.list.audios && ap.list.audios.length > 0) {
+						clearInterval(timer);
+
+						try {
+							if (saved.volume !== undefined) ap.volume(saved.volume, true);
+							if (saved.index !== undefined && saved.index < ap.list.audios.length && saved.index !== ap.list.index) {
+								ap.list.switch(saved.index);
+							}
+							if (saved.time > 1) {
+								var seek = setInterval(function() {
+									if (ap.audio && ap.audio.readyState >= 2) {
+										clearInterval(seek);
+										ap.seek(saved.time);
+										ap.play();
+									}
+								}, 200);
+							} else if (saved.index > 0) {
+								setTimeout(function() { ap.play(); }, 500);
+							}
+						} catch(e) {}
+
+						localStorage.removeItem(STORAGE_KEY);
+					}
+				}, 500);
+			}
+
+			// 1. 页面关闭/跳转前保存状态
+			window.addEventListener('beforeunload', saveState);
+
+			// 2. 页面切换到后台时也保存（兼容性更好）
+			document.addEventListener('visibilitychange', function() {
+				if (document.hidden) saveState();
+			});
+
+			// 3. 页面从 BFCache 恢复时（前进/后退），无需执行脚本，但音频可能已暂停
+			window.addEventListener('pageshow', function(e) {
+				if (e.persisted) {
+					// 页面从 BFCache 恢复，JS 状态保留了，但 audio 元素可能暂停了
+					setTimeout(function() {
+						var ap = document.querySelector('meting-js')?.aplayer;
+						if (ap && ap.audio && ap.audio.paused) ap.play();
+					}, 500);
+				}
+			});
+
+			// 4. 页面加载后恢复状态
+			if (document.readyState === 'complete') restoreState();
+			else window.addEventListener('load', restoreState);
+
+			// 5. 定期保存（兜底：页面被意外关闭时至少有一些进度被保存）
+			setInterval(saveState, 30000);
+		})();
+		</script>
 	</body>
 </html>
