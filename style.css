@@ -4,3 +4,18 @@ i.kirafont.icon-huoche {
 i.kirafont.icon-rss {
   font-family: "iconfont" !important;
 }
+
+/* 全局音乐播放器 - 圆角样式 */
+.aplayer.aplayer-fixed .aplayer-body {
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
+}
+
+.aplayer.aplayer-fixed .aplayer-list {
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
+}
+
+.aplayer.aplayer-fixed .aplayer-pic {
+  border-radius: 12px 0 0 0 !important;
+}
