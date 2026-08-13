@@ -197,6 +197,10 @@ friends:
       name: JerryLife
       link: https://www.jerry-nis.top
       avatar: https://img.jerry-nis.top/d8703c5c-4c4a-49cc-bd94-3363c9eda2d8.png
-
+    - 
+      name: Brandon's Blog
+      link: https://blog.oopss.top
+      avatar: https://cdn.oopss.top/icon.png
+      
 # 可复制的代码块
 copyableCodeblock: true
