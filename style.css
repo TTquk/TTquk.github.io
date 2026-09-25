@@ -239,26 +239,29 @@ i.kirafont.icon-rss {
   background-color: #fff;
 }
 
-.kira-theme-icon {
+/* 两个悬浮按钮内的图标统一为 SVG，尺寸与笔画保持一致
+   （避免字体图标在不同浏览器/系统下字形与粗细不一致） */
+.kira-toggle-icon {
   width: 22px;
   height: 22px;
+  flex: none;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.8;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 /* 浅色下显示月亮（点击进入深色），深色下显示太阳 */
-.kira-theme-icon-sun {
+.kira-toggle-icon-sun {
   display: none;
 }
 
-html[data-theme='dark'] .kira-theme-icon-sun {
+html[data-theme='dark'] .kira-toggle-icon-sun {
   display: block;
 }
 
-html[data-theme='dark'] .kira-theme-icon-moon {
+html[data-theme='dark'] .kira-toggle-icon-moon {
   display: none;
 }
 
