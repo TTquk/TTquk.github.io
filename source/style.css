@@ -210,3 +210,346 @@ i.kirafont.icon-rss {
     max-height: 46vh;
   }
 }
+
+/* ============================================================
+   亮暗色切换按钮（与搜索按钮同款圆形悬浮按钮）
+   ============================================================ */
+.kira-theme {
+  margin-top: 10px;
+  pointer-events: all;
+}
+
+.kira-theme-toggle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(85, 85, 85);
+  background-color: rgba(255, 255, 255, 0.501);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.kira-theme-toggle:hover {
+  color: rgb(255, 185, 0);
+  background-color: #fff;
+}
+
+.kira-theme-icon {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 浅色下显示月亮（点击进入深色），深色下显示太阳 */
+.kira-theme-icon-sun {
+  display: none;
+}
+
+html[data-theme='dark'] .kira-theme-icon-sun {
+  display: block;
+}
+
+html[data-theme='dark'] .kira-theme-icon-moon {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .kira-theme {
+    /* 搜索按钮 right:62px，宽 40px，这里再左移 50px 并排摆放 */
+    position: fixed;
+    top: 20px;
+    right: 112px;
+    margin-top: 0;
+    z-index: 20;
+  }
+}
+
+/* ============================================================
+   配色变量
+   浅色值即主题原有配色，深色值用于 [data-theme='dark']
+   ============================================================ */
+html {
+  --kira-page-bg: #eef0f3;
+  --kira-card-bg: #ffffff;
+  --kira-text: #444444;
+  --kira-heading: #111111;
+  --kira-text-muted: #8a9199;
+  --kira-border: #eeeeee;
+  --kira-subtle-bg: #f8f8f8;
+}
+
+html[data-theme='dark'] {
+  --kira-page-bg: #16181c;
+  --kira-card-bg: #1e2126;
+  --kira-text: #c2c8d0;
+  --kira-heading: #e7eaef;
+  --kira-text-muted: #878f9a;
+  --kira-border: rgba(255, 255, 255, 0.1);
+  --kira-subtle-bg: #262a30;
+}
+
+html[data-theme='dark'] body {
+  background-color: var(--kira-page-bg);
+}
+
+/* 深色下背景图压低存在感，避免与文字抢读 */
+html[data-theme='dark'] .kira-background {
+  opacity: 0.08;
+}
+
+/* ---------- 主内容区 ---------- */
+html[data-theme='dark'] .kira-main-content {
+  background-color: var(--kira-card-bg);
+  color: var(--kira-text);
+}
+
+html[data-theme='dark'] .kira-content {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- 文章正文 ---------- */
+html[data-theme='dark'] article {
+  color: var(--kira-text);
+}
+
+html[data-theme='dark'] article h1,
+html[data-theme='dark'] article h2,
+html[data-theme='dark'] article h3,
+html[data-theme='dark'] article h4,
+html[data-theme='dark'] article h5,
+html[data-theme='dark'] article h6 {
+  color: var(--kira-heading);
+}
+
+html[data-theme='dark'] article h2::before {
+  border-bottom-color: var(--kira-border);
+}
+
+html[data-theme='dark'] article blockquote {
+  color: var(--kira-text-muted);
+  background-color: var(--kira-subtle-bg);
+  border-color: var(--kira-border);
+}
+
+html[data-theme='dark'] article blockquote::before,
+html[data-theme='dark'] article blockquote::after {
+  color: #5c646e;
+}
+
+html[data-theme='dark'] article hr {
+  border-top-color: var(--kira-border);
+}
+
+html[data-theme='dark'] article del {
+  color: var(--kira-text-muted);
+}
+
+/* 无序列表圆点带白色描边，深色下要与卡片底色一致才不突兀 */
+html[data-theme='dark'] article ul li::before {
+  border-color: var(--kira-card-bg);
+}
+
+html[data-theme='dark'] article > table {
+  color: var(--kira-text);
+}
+
+html[data-theme='dark'] article > table thead,
+html[data-theme='dark'] article > table thead tr {
+  background-color: var(--kira-subtle-bg);
+  border-bottom-color: var(--kira-border);
+}
+
+html[data-theme='dark'] article > table th,
+html[data-theme='dark'] article > table td {
+  border-color: var(--kira-border);
+}
+
+html[data-theme='dark'] article > table tr {
+  background-color: var(--kira-card-bg);
+}
+
+html[data-theme='dark'] article > table tr:nth-child(2n) {
+  background-color: var(--kira-subtle-bg);
+}
+
+html[data-theme='dark'] article input[type='checkbox']::after {
+  background-color: var(--kira-subtle-bg);
+  border-color: #4a5058;
+}
+
+/* ---------- 文章卡片、版权、上下篇 ---------- */
+html[data-theme='dark'] .kira-post-cover {
+  background-color: #2a2e33;
+}
+
+html[data-theme='dark'] .kira-post-copyright {
+  color: var(--kira-text);
+  background-color: var(--kira-subtle-bg);
+}
+
+html[data-theme='dark'] .kira-post-nav {
+  background-color: transparent;
+}
+
+html[data-theme='dark'] .kira-post-footer {
+  background-color: var(--kira-subtle-bg);
+}
+
+html[data-theme='dark'] .kira-post:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+html[data-theme='dark'] .kira-hr {
+  border-bottom-color: var(--kira-border);
+}
+
+/* ---------- 分页 ---------- */
+/* 注意：主题里的选择器是 .kira-content .kira-main-content .kira-page-nav，
+   权重高于 0,3,0，这里必须带上 .kira-main-content 才能覆盖 */
+html[data-theme='dark'] .kira-main-content .kira-page-nav {
+  color: var(--kira-text-muted);
+  background-color: var(--kira-subtle-bg);
+}
+
+/* ---------- 侧边栏 ---------- */
+html[data-theme='dark'] .kira-widget-wrap {
+  background-color: var(--kira-card-bg);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme='dark'] .kira-social a,
+html[data-theme='dark'] .kira-widget-wrap .kira-widget li a,
+html[data-theme='dark'] .kira-list-item {
+  color: var(--kira-text-muted);
+}
+
+html[data-theme='dark'] .kira-count div {
+  color: var(--kira-text-muted);
+}
+
+html[data-theme='dark'] .kira-count div span {
+  color: var(--kira-heading);
+}
+
+html[data-theme='dark'] .kira-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme='dark'] .kira-copyright {
+  color: var(--kira-text-muted);
+}
+
+/* ---------- 悬浮按钮 ---------- */
+html[data-theme='dark'] .kira-search-toggle,
+html[data-theme='dark'] .kira-theme-toggle,
+html[data-theme='dark'] .kira-backtotop {
+  color: var(--kira-text-muted);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme='dark'] .kira-search-toggle:hover,
+html[data-theme='dark'] .kira-theme-toggle:hover {
+  color: rgb(49, 174, 255);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+html[data-theme='dark'] .kira-search.open .kira-search-toggle {
+  color: #fff;
+  background-color: rgb(49, 174, 255);
+}
+
+/* ---------- 搜索面板 ---------- */
+html[data-theme='dark'] .kira-search-panel {
+  background-color: #24272d;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme='dark'] .kira-search-box {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme='dark'] .kira-search-input {
+  color: var(--kira-heading);
+}
+
+html[data-theme='dark'] .kira-search-item:hover,
+html[data-theme='dark'] .kira-search-item.active {
+  background-color: rgba(49, 174, 255, 0.16);
+}
+
+html[data-theme='dark'] .kira-search-item-title {
+  color: var(--kira-heading);
+}
+
+html[data-theme='dark'] .kira-search-item-excerpt {
+  color: var(--kira-text-muted);
+}
+
+html[data-theme='dark'] .kira-search-item-meta {
+  color: #6f7780;
+}
+
+html[data-theme='dark'] .kira-search-results mark {
+  background-color: rgba(255, 185, 0, 0.28);
+  color: #ffe9b0;
+}
+
+/* ---------- 全局音乐播放器 ---------- */
+html[data-theme='dark'] .aplayer.aplayer-fixed,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-body,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-list,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-info,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-miniswitcher {
+  background-color: #23262c !important;
+}
+
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-bar {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-notice {
+  color: var(--kira-text) !important;
+  background-color: #2b2f36 !important;
+}
+
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-title,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-author {
+  color: var(--kira-heading);
+}
+
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-list ol li {
+  border-top-color: rgba(255, 255, 255, 0.06);
+  color: var(--kira-text-muted);
+}
+
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-list ol li:hover,
+html[data-theme='dark'] .aplayer.aplayer-fixed .aplayer-list ol li.aplayer-list-light {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ---------- 窄屏：侧边栏抽屉与顶部栏 ---------- */
+@media (max-width: 1000px) {
+  html[data-theme='dark'] .kira-body .kira-sidebar,
+  html[data-theme='dark'] .kira-sidebar {
+    background-color: var(--kira-card-bg);
+  }
+
+  html[data-theme='dark'] .kira-header a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 1180px) {
+  html[data-theme='dark'] .kira-backtotop {
+    background-color: rgba(35, 38, 44, 0.95);
+  }
+}

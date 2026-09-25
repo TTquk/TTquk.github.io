@@ -34,6 +34,24 @@
 			<div class="kira-search-results" id="kira-search-results"></div>
 		</div>
 	</div>
+	<div class="kira-theme">
+		<button
+			class="kira-theme-toggle"
+			type="button"
+			aria-label="切换深色模式"
+			title="切换深色 / 浅色（Ctrl + J）"
+		>
+			<svg class="kira-theme-icon kira-theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+				<circle cx="12" cy="12" r="4.2" />
+				<path
+					d="M12 2.4v2.3M12 19.3v2.3M2.4 12h2.3M19.3 12h2.3M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"
+				/>
+			</svg>
+			<svg class="kira-theme-icon kira-theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+				<path d="M20.6 14.4A8.7 8.7 0 0 1 9.6 3.4a8.7 8.7 0 1 0 11 11z" />
+			</svg>
+		</button>
+	</div>
 	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
 		<button class="mdui-fab mdui-ripple">
 			<i class="kirafont icon-caret-up"></i>

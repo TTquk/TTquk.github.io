@@ -5,6 +5,23 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script>
+			// 尽早确定配色，避免刷新时先亮后暗的闪烁
+			(function () {
+				var scheme;
+				try {
+					var saved = localStorage.getItem('kira-color-scheme');
+					if (saved === 'dark' || saved === 'light') scheme = saved;
+				} catch (e) {}
+				if (!scheme) {
+					scheme =
+						window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+							? 'dark'
+							: 'light';
+				}
+				document.documentElement.setAttribute('data-theme', scheme);
+			})();
+		</script>
 		<% if (page.description){ %>
 		<meta name="description" content="<%= page.description %>" />
 		<% } else if (page.excerpt){ %>
@@ -37,6 +54,7 @@
 		<%- css("lib/highlight/atom-one-dark.min") %>
 		<%- js("lib/highlight/highlight.min") %>
 		<!-- 预置 kiraicon -->
+		<%- js("js/kira-theme") %>
 		<%- css("lib/iconfont/iconfont") %>
 		<% if (theme.iconlib) { %>
 			<link rel="stylesheet" href="<%= theme.iconlib %>" crossorigin />
