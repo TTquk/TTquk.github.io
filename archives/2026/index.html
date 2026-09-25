@@ -65,6 +65,9 @@
 <script src="/deps/js/APlayer.min.js"></script>
 <script src="/deps/js/Meting.min.js"></script>
 
+		
+<script src="/js/kira-search.js"></script>
+
 	<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="TT清沫ukの博客" type="application/atom+xml">
 </head>
 
@@ -758,6 +761,41 @@
 				</div>
 			</div>
 			<div class="kira-right-column">
+	<div class="kira-search" id="kira-search" data-index="/search.json">
+		<button
+			class="kira-search-toggle"
+			type="button"
+			aria-label="站内搜索"
+			title="站内搜索（Ctrl + K）"
+		>
+			<i class="kirafont icon-search"></i>
+		</button>
+		<div
+			class="kira-search-panel"
+			role="dialog"
+			aria-label="站内搜索"
+			aria-hidden="true"
+		>
+			<div class="kira-search-box">
+				<i class="kirafont icon-search"></i>
+				<input
+					class="kira-search-input"
+					type="text"
+					placeholder="搜索文章标题或内容…"
+					autocomplete="off"
+					autocorrect="off"
+					spellcheck="false"
+					enterkeyhint="search"
+					aria-label="搜索关键词"
+				/>
+				<button class="kira-search-close" type="button" aria-label="关闭搜索">
+					<i class="kirafont icon-close"></i>
+				</button>
+			</div>
+			<div class="kira-search-status" id="kira-search-status"></div>
+			<div class="kira-search-results" id="kira-search-results"></div>
+		</div>
+	</div>
 	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
 		<button class="mdui-fab mdui-ripple">
 			<i class="kirafont icon-caret-up"></i>

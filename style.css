@@ -24,3 +24,189 @@ i.kirafont.icon-rss {
 .aplayer.aplayer-fixed .aplayer-pic {
   border-radius: 20px 0 0 20px !important;
 }
+
+/* ============================================================
+   站内搜索（右上角）
+   桌面端：定位在右侧栏顶部的空白区域，与底部的「回到顶部」互不干扰
+   窄屏（≤1000px）：顶部 header 右上角是头像，搜索按钮往左偏移避让
+   ============================================================ */
+.kira-search {
+  position: relative;
+  margin-top: 15px;
+  pointer-events: all;
+}
+
+.kira-search-toggle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(85, 85, 85);
+  background-color: rgba(255, 255, 255, 0.501);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.kira-search-toggle i {
+  font-size: 22px;
+}
+
+.kira-search-toggle:hover {
+  color: rgb(49, 174, 255);
+  background-color: #fff;
+}
+
+.kira-search.open .kira-search-toggle {
+  color: #fff;
+  background-color: rgb(49, 174, 255);
+}
+
+.kira-search-panel {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 330px;
+  max-width: calc(100vw - 24px);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(138, 151, 174, 0.45);
+  overflow: hidden;
+  z-index: 30;
+}
+
+.kira-search.open .kira-search-panel {
+  display: block;
+}
+
+.kira-search-box {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: #9ca2a8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.kira-search-box > i {
+  font-size: 18px;
+}
+
+.kira-search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #363636;
+  outline: none;
+}
+
+.kira-search-input::placeholder {
+  color: #b6bcc4;
+}
+
+.kira-search-close {
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  color: #b6bcc4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.kira-search-close:hover {
+  color: rgb(255, 78, 106);
+  background-color: rgba(255, 78, 106, 0.1);
+}
+
+.kira-search-status {
+  padding: 8px 14px 4px;
+  font-size: 12px;
+  color: #a3a8ae;
+}
+
+.kira-search-results {
+  max-height: 52vh;
+  overflow-y: auto;
+  padding-bottom: 6px;
+}
+
+.kira-search-results:empty {
+  display: none;
+}
+
+.kira-search-item {
+  display: block;
+  margin: 0 6px 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 200ms;
+}
+
+.kira-search-item:hover,
+.kira-search-item.active {
+  background-color: rgba(49, 174, 255, 0.1);
+}
+
+.kira-search-item-title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #363636;
+}
+
+.kira-search-item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #8a93a0;
+}
+
+.kira-search-item-meta {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #b6bcc4;
+}
+
+.kira-search-results mark {
+  padding: 0 2px;
+  border-radius: 3px;
+  background-color: rgba(255, 185, 0, 0.35);
+  color: inherit;
+}
+
+/* 窄屏：右上角被 header 头像占用，搜索按钮左移避让，面板改为全宽下拉 */
+@media (max-width: 1000px) {
+  .kira-search {
+    position: fixed;
+    /* 与 header 中 45px 的头像垂直居中对齐 */
+    top: 20px;
+    /* 头像右侧占位 55px，再留 7px 间隙 */
+    right: 62px;
+    margin-top: 0;
+    z-index: 20;
+  }
+
+  .kira-search-panel {
+    position: fixed;
+    /* 按钮底部 60px + 12px 间距，避免压住头像 */
+    top: 72px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+  }
+
+  .kira-search-results {
+    max-height: 46vh;
+  }
+}
