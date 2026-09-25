@@ -23,6 +23,8 @@
 │   ├── draft.md         # 草稿模板
 │   ├── page.md          # 页面模板
 │   └── post.md          # 文章模板
+├── scripts/             # 站点脚本
+│   └── search-generator.js  # 生成站内搜索索引 search.json
 ├── source/              # 源文件文件夹
 │   ├── _posts/          # 文章目录
 │   ├── about.md         # 关于页面
@@ -87,7 +89,7 @@ npm run build && npm run deploy
 
 - 📝 文章分类与标签
 - 💬 Giscus 评论系统
-- 🔍 文章搜索
+- 🔍 站内搜索（右上角图标，或按 `Ctrl + K` / `⌘ + K`，支持标题、标签、正文匹配与关键词高亮）
 - 📱 响应式设计
 - 🌈 自定义配色
 - 🤝 友链功能

@@ -1,0 +1,39 @@
+diff --git a/node_modules/hexo-seo-submit/dist/bin/index.mjs b/node_modules/hexo-seo-submit/dist/bin/index.mjs
+index b7fb834..fc3b732 100644
+--- a/node_modules/hexo-seo-submit/dist/bin/index.mjs
++++ b/node_modules/hexo-seo-submit/dist/bin/index.mjs
+@@ -14,7 +14,7 @@ import { GoogleAuth } from 'google-auth-library';
+ var PLUGIN_NAME = "hexo-seo-submit";
+ var SearchEngineApiUri = {
+   ["baidu" /* BAIDU */]: "http://data.zz.baidu.com/urls",
+-  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/pox/SubmitUrlBatch",
++  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch",
+   ["google" /* GOOGLE */]: "https://indexing.googleapis.com/batch"
+ };
+ var CONTENT_SEPARATOR = "\n";
+diff --git a/node_modules/hexo-seo-submit/dist/index.js b/node_modules/hexo-seo-submit/dist/index.js
+index 279caa4..8223f9b 100644
+--- a/node_modules/hexo-seo-submit/dist/index.js
++++ b/node_modules/hexo-seo-submit/dist/index.js
+@@ -33,7 +33,7 @@ var SearchEngines = /* @__PURE__ */ ((SearchEngines3) => {
+ var FILE_ROOT_PATH = "hexo-seo-submit";
+ var SearchEngineApiUri = {
+   ["baidu" /* BAIDU */]: "http://data.zz.baidu.com/urls",
+-  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/pox/SubmitUrlBatch",
++  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch",
+   ["google" /* GOOGLE */]: "https://indexing.googleapis.com/batch"
+ };
+ var CONTENT_SEPARATOR = "\n";
+diff --git a/node_modules/hexo-seo-submit/dist/index.mjs b/node_modules/hexo-seo-submit/dist/index.mjs
+index 4e2400b..bc4378b 100644
+--- a/node_modules/hexo-seo-submit/dist/index.mjs
++++ b/node_modules/hexo-seo-submit/dist/index.mjs
+@@ -21,7 +21,7 @@ var SearchEngines = /* @__PURE__ */ ((SearchEngines3) => {
+ var FILE_ROOT_PATH = "hexo-seo-submit";
+ var SearchEngineApiUri = {
+   ["baidu" /* BAIDU */]: "http://data.zz.baidu.com/urls",
+-  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/pox/SubmitUrlBatch",
++  ["bing" /* BING */]: "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch",
+   ["google" /* GOOGLE */]: "https://indexing.googleapis.com/batch"
+ };
+ var CONTENT_SEPARATOR = "\n";

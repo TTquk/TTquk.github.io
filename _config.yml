@@ -135,6 +135,11 @@ feed:
   autodiscovery: true
   template:
 
+# 站内搜索索引
+## 生成 /search.json，供右上角搜索框使用（生成逻辑见 scripts/search-generator.js）
+search_json:
+  content_limit: 3000 # 每篇文章收录的正文字符数，0 表示不限制
+
 # SEO Auto Submit
 ## Docs: https://github.com/tardis-ksh/hexo-seo-submit
 hexo-seo-submit:

@@ -6,6 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "postinstall": "patch-package",
     "server": "hexo server"
   },
   "hexo": {
@@ -26,5 +27,8 @@
     "hexo-seo-submit": "^2.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-kira": "^1.4.9"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
   }
 }
