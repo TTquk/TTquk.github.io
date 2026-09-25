@@ -5,6 +5,23 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script>
+			// 尽早确定配色，避免刷新时先亮后暗的闪烁
+			(function () {
+				var scheme;
+				try {
+					var saved = localStorage.getItem('kira-color-scheme');
+					if (saved === 'dark' || saved === 'light') scheme = saved;
+				} catch (e) {}
+				if (!scheme) {
+					scheme =
+						window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+							? 'dark'
+							: 'light';
+				}
+				document.documentElement.setAttribute('data-theme', scheme);
+			})();
+		</script>
 		
 		<meta name="description" content="从性能、生态、易用性、适用场景四个维度，全面对比 Hexo、Hugo、Jekyll、WordPress 等主流博客框架，帮你选择最适合的建站工具。" />
 		
@@ -40,6 +57,9 @@
 <script src="/lib/highlight/highlight.min.js"></script>
 
 		<!-- 预置 kiraicon -->
+		
+<script src="/js/kira-theme.js"></script>
+
 		
 <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
 
@@ -964,7 +984,7 @@
   
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
+			                  
 			<!-- 先找到与当前文字相同的目录 -->
 			      
 			<!-- 在找到当前文章所在的 index -->
@@ -980,7 +1000,7 @@
 				<span>下一章</span>
 				<a href="/2026/06/27/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9%E6%AF%94%E6%8C%87%E5%8D%97/"> 💬静态博客评论系统对比指南</a>
 			</div>
-			                              
+			                  
 		</nav>
 	</div>
 	
@@ -1058,6 +1078,24 @@
 			<div class="kira-search-status" id="kira-search-status"></div>
 			<div class="kira-search-results" id="kira-search-results"></div>
 		</div>
+	</div>
+	<div class="kira-theme">
+		<button
+			class="kira-theme-toggle"
+			type="button"
+			aria-label="切换深色模式"
+			title="切换深色 / 浅色（Ctrl + J）"
+		>
+			<svg class="kira-theme-icon kira-theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+				<circle cx="12" cy="12" r="4.2" />
+				<path
+					d="M12 2.4v2.3M12 19.3v2.3M2.4 12h2.3M19.3 12h2.3M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"
+				/>
+			</svg>
+			<svg class="kira-theme-icon kira-theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+				<path d="M20.6 14.4A8.7 8.7 0 0 1 9.6 3.4a8.7 8.7 0 1 0 11 11z" />
+			</svg>
+		</button>
 	</div>
 	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
 		<button class="mdui-fab mdui-ripple">
