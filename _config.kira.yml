@@ -200,7 +200,11 @@ friends:
     - 
       name: Brandon's Blog
       link: https://blog.oopss.top
-      avatar: https://cdn.oopss.top/icon.png
+      avatar: https://jsd.oopss.top/npm/br-blog@1.0.11/img/icon.webp
+    - 
+      name: linmeng'blog
+      link: https://kslinmeng.cn/
+      avatar: https://cdn.kslinmeng.cn/gh/tanf/my-photos@main/new-windows1/20260901222623983.png
       
 # 可复制的代码块
 copyableCodeblock: true
